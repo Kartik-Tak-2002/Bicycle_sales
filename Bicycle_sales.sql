@@ -84,12 +84,15 @@ CREATE TABLE stores (
 select * from stores;
 
 
+-- Total sales
+
 SELECT 
     SUM(oi.list_price) AS Total_Sale
 FROM
     order_items oi;
     
     
+-- Top 3 order_item price
 
 SELECT 
     *
@@ -98,7 +101,7 @@ FROM
 ORDER BY list_price desc
 LIMIT 3;
 
-
+-- top 10 customre
 SELECT 
     *
 FROM
@@ -107,7 +110,7 @@ WHERE
     customer_id
 LIMIT 10;
 
-
+--
 SELECT 
     o.store_id,
     COUNT(o.order_id) AS total_orders,
